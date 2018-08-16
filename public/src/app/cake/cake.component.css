@@ -1,0 +1,11 @@
+img {
+    width: 50%;
+}
+
+#cakeToShowInfo {
+    display: inline-block;
+    vertical-align: top;
+    max-height: 250px;
+    overflow: scroll;
+    width: 30%;
+}

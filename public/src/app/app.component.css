@@ -1,0 +1,37 @@
+.container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#createCake {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#displayCakes {
+    max-height: 250px;
+    width: 50%;
+    overflow: scroll;
+    display: inline-block;
+}
+
+/* .cake {
+    display: inline-block;
+    width: 40%;
+} */
+
+img {
+    width: 40%;
+}
+
+.ratingForm {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.commentInput {
+    width: 200px;
+    height: 40px;
+}

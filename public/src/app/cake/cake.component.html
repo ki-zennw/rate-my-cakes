@@ -1,0 +1,10 @@
+<div id="cakeToShow">
+  <img src="{{cakeToShow.img}}" alt="">
+  <div id="cakeToShowInfo">
+    <p>Average Rating: {{cakeToShow.avg_rating}}</p>
+    <div *ngFor="let rating of cakeToShow.ratings">
+      <p>{{rating.comment}}</p>
+      <p>{{rating.rating}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<p>
+  ratings works!
+</p>
+<div id="cakeToShowInfo">
+  <!-- <p>Average Rating: {{ratingsToShow.avgRating}}</p> -->
+  <p *ngFor="let rating of ratingsToShow">{{rating.comment}}</p>
+  <p>{{rating.rating}}</p>
+</div>

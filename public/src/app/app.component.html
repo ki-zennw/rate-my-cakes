@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Rate My Cakes</h1>
+  <div id="createCake">
+    <fieldset>
+      <p>Submit a Cake to be Rated</p>
+      <form (submit)="onSubmitCreateCake($event)">
+        <p>Baker Name:
+          <input type="text" name="newCake.baker_name" [(ngModel)]="newCake.baker_name" id="">
+        </p>
+        <p>Image URL:
+          <input type="text" name="newCake.img" [(ngModel)]="newCake.img" id="">
+        </p>
+        <input type="submit" value="Submit">
+      </form>
+    </fieldset>
+  </div>
+  <!--createCake end-->
+  <div id="displayCakes">
+    <div class="cake" *ngFor="let cake of cakes">
+      <img src="{{cake.img}}" alt="" (click)="cakeToShow(cake)">
+      <form id="{{cake._id}}" class="ratingForm" (submit)="onSubmitCreateRating($event, newRating)">
+        <select name="newRating.rating" id="" [(ngModel)]="newRating.rating">
+          <option value="1">1 Star</option>
+          <option value="2">2 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="5">5 Stars</option>
+        </select>
+        <br>
+        <input class="commentInput" type="text" name="newRating.comment" id="" [(ngModel)]="newRating.comment" placeholder="Type your comment here">
+        <br>
+        <input type="submit" value="Rate!">
+      </form>
+    </div>
+  </div>
+  <!--displayCakes end-->
+  <app-cake *ngIf="selectedCake" [cakeToShow]="cake"></app-cake>
+</div>
